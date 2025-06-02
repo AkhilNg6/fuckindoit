@@ -20,10 +20,19 @@ const openSans = Open_Sans({
 export default function Home() {
   const [voteStatus, setVoteStatus] = useState(null);
 
-  const handleVote = (vote) => {
-    setVoteStatus(vote);
-    // You can add your API call here if needed
-  };
+  const handleVote = async (vote) => {
+  setVoteStatus(vote);
+  try {
+    await fetch('/api/vote', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ vote }),
+    });
+  } catch (err) {
+    // Optionally handle error
+    console.error('Failed to save vote:', err);
+  }
+};
 
   return (
     <div className={`${openSans.className} min-h-screen bg-red-600`}>
