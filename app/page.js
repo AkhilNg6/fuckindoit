@@ -38,23 +38,25 @@ export default function Home() {
     <div className={`${openSans.className} min-h-screen bg-red-600`}>
       {/* Top Bar */}
       <header className="w-full bg-white h-16 flex items-center justify-between px-8 shadow-sm" style={{ minHeight: '2cm' }}>
-        <span className="inline-block w-8 h-8 bg-red-600 rounded-xl"></span>
-        <div className={`text-2xl font-bold text-black text-left ${poppins.className}`}>Fuckin Do It</div>
-        <nav className="flex space-x-8">
-          <Link
-            href="#how-it-works"
-            className={`text-black font-semibold relative px-2 py-1 transition-colors duration-200 hover:text-red-600 after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-red-600 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left after:duration-300`}
-          >
-            How It Works
-          </Link>
-          <Link
-            href="#success-stories"
-            className={`text-black font-semibold relative px-2 py-1 transition-colors duration-200 hover:text-red-600 after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-red-600 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left after:duration-300`}
-          >
-            Success Stories
-          </Link>
-        </nav>
-      </header>
+  <div className="flex items-center gap-4">
+    <span className="inline-block w-8 h-8 bg-red-600 rounded-xl"></span>
+    <div className={`text-2xl font-bold text-black ${poppins.className}`}>Fuckin Do It</div>
+  </div>
+  <nav className="flex space-x-8">
+    <Link
+      href="#how-it-works"
+      className={`text-black font-semibold relative px-2 py-1 transition-colors duration-200 hover:text-red-600 after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-red-600 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left after:duration-300`}
+    >
+      How It Works
+    </Link>
+    <Link
+      href="#success-stories"
+      className={`text-black font-semibold relative px-2 py-1 transition-colors duration-200 hover:text-red-600 after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-red-600 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left after:duration-300`}
+    >
+      Success Stories
+    </Link>
+  </nav>
+</header>
 
       {/* Main Section */}
       <main className="flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] bg-red-700 px-4 py-20">
