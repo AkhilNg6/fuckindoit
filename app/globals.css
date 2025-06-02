@@ -5,6 +5,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Consider defining your brand colors here for reuse if not done in tailwind.config.js */
+  --brand-red: #dc2626; /* Example for red-600 */
+  --brand-yellow: #facc15; /* Example for yellow-300 */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,8 +20,18 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  /* This line is likely overridden by Tailwind's base or your font variable classes.
+     If you want a specific global fallback, configure it in tailwind.config.js theme.fontFamily.sans */
 }
-html{
-  scroll-behavior: smooth;  
+
+html {
+  scroll-behavior: smooth;
 }
+
+/* Example of a custom component style you might add for link animations if needed globally */
+/* @layer components {
+  .nav-link-hover {
+    @apply relative px-2 py-1 transition-colors duration-200 hover:text-red-600 after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-red-600 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left after:duration-300;
+  }
+} */
